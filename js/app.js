@@ -4,7 +4,7 @@ NORPULS
 Application
 ==========================================================
 */
-
+import { createCard } from "./components/card.js";
 import { config } from "./config.js";
 import DataHub from "./datahub.js";
 
@@ -89,12 +89,51 @@ async function start() {
 
         <div class="grid">
 
-            ${createCard("Brent","--","")}
-            ${createCard("USD/NOK","--","")}
-            ${createCard("OSEBX","--","")}
-            ${createCard("TTF Gass","--","")}
-            ${createCard("Nord Pool","--","")}
-            ${createCard("EU Gasslager","--","")}
+           ${createCard({
+    title:"Brent",
+    value:"--",
+    unit:"USD",
+    change:"",
+    trend:"neutral"
+})}
+
+${createCard({
+    title:"USD/NOK",
+    value:"--",
+    change:"",
+    trend:"neutral"
+})}
+
+${createCard({
+    title:"OSEBX",
+    value:"--",
+    change:"",
+    trend:"neutral"
+})}
+
+${createCard({
+    title:"TTF Gass",
+    value:"--",
+    unit:"EUR/MWh",
+    change:"",
+    trend:"neutral"
+})}
+
+${createCard({
+    title:"Nord Pool",
+    value:"--",
+    unit:"kr/kWh",
+    change:"",
+    trend:"neutral"
+})}
+
+${createCard({
+    title:"EU Gasslager",
+    value:"--",
+    unit:"%",
+    change:"",
+    trend:"neutral"
+})}
 
         </div>
 
